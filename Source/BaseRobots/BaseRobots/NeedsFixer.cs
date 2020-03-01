@@ -1,20 +1,10 @@
 ﻿using System;
-using System.Reflection;
-using Harmony;
+using HarmonyLib;
 using RimWorld;
 using Verse;
 
 namespace BaseRobot
 {
-	[StaticConstructorOnStartup]
-	class Main
-	{
-		static Main()
-		{
-			var harmony = HarmonyInstance.Create("com.github.harmony.rimworld.baserobots");
-			harmony.PatchAll(Assembly.GetExecutingAssembly());
-		}
-	}
 
 	[HarmonyPatch(typeof(Pawn_NeedsTracker))]
 	[HarmonyPatch("ShouldHaveNeed")]

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ThingDefs>
+<Defs>
 
 	<ThingDef Class="BaseRobot.ThingDef_BaseRobot" Name="Thing_BaseRobot" Abstract="True">
 		<thingClass>BaseRobot.ArcBaseRobot</thingClass>
@@ -9,7 +9,7 @@
 		<altitudeLayer>Pawn</altitudeLayer>
 		<useHitPoints>false</useHitPoints>
 		<hasTooltip>true</hasTooltip>
-		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 		<statBases>
 			<Flammability>1.0</Flammability>
 			<LeatherAmount>0</LeatherAmount>
@@ -67,4 +67,4 @@
 		</race>
 	</ThingDef>
 
-</ThingDefs>
+</Defs>
