@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ThinkTrees>
+<Defs>
 
 	<ThinkTreeDef>
 		<defName>X2_AIRobot</defName>
 		<thinkRoot Class="ThinkNode_Priority">
 			<subNodes>
 
-        <!-- If we HAVE to keep lying down... -->
+				<!-- If we HAVE to keep lying down... -->
 				<li Class="ThinkNode_ConditionalMustKeepLyingDown">
 					<subNodes>
 
-            <!-- Keep lying down -->
+						<!-- Keep lying down -->
 						<li Class="JobGiver_KeepLyingDown" />
 					</subNodes>
 				</li>
@@ -29,16 +29,16 @@
 
 
 				<!-- If on colonist team, do forced and emergency work -->
-        <li Class="ThinkNode_ConditionalColonist">
+				<li Class="ThinkNode_ConditionalColonist">
 					<subNodes>
-            <li Class="ThinkNode_Tagger">
-              <tagToGive>DraftedOrder</tagToGive>
-              <subNodes>
-                <li Class="JobGiver_Orders" />
-              </subNodes>
-            </li>
-          </subNodes>
-        </li>
+						<li Class="ThinkNode_Tagger">
+							<tagToGive>DraftedOrder</tagToGive>
+							<subNodes>
+								<li Class="JobGiver_Orders" />
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
 
 				<!-- Lord directives (high priority) -->
 				<li Class="ThinkNode_JoinVoluntarilyJoinableLord">
@@ -72,29 +72,22 @@
 				</li>
 
 				<!-- Main behavior core-->
-				<li Class="ThinkNode_ConditionalColonyFaction">
+				<li Class="ThinkNode_PrioritySorter">
 					<subNodes>
-						<li Class="ThinkNode_PrioritySorter">
-							<subNodes>
-								<!-- AIPawn - satisfy basic needs -->
-								<li Class="BaseRobot.JobGiver_RechargeEnergy" />
+						<!-- AIPawn - satisfy basic needs -->
+						<li Class="BaseRobot.JobGiver_RechargeEnergy" />
 
-								<li Class="BaseRobot.JobGiver_Work" />
-							</subNodes>
-						</li>
+						<li Class="BaseRobot.JobGiver_Work" />
 					</subNodes>
 				</li>
 
 				<!-- Idle wander for colonists -->
-				<li Class="ThinkNode_ConditionalColonyFaction">
+
+				<li Class="ThinkNode_Tagger">
+					<tagToGive>Idle</tagToGive>
 					<subNodes>
-						<li Class="ThinkNode_Tagger">
-							<tagToGive>Idle</tagToGive>
-							<subNodes>
-								<li Class="JobGiver_WanderCurrentRoom">
-									<maxDanger>Deadly</maxDanger>
-								</li>
-							</subNodes>
+						<li Class="JobGiver_WanderCurrentRoom">
+							<maxDanger>Deadly</maxDanger>
 						</li>
 					</subNodes>
 				</li>
@@ -104,11 +97,7 @@
 				<li Class="ThinkNode_ConditionalPrisoner">
 					<invert>true</invert>
 					<subNodes>
-						<li Class="ThinkNode_ConditionalNeutralFaction">
-							<subNodes>
-								<li Class="JobGiver_ExitMapBest" />
-							</subNodes>
-						</li>
+						<li Class="JobGiver_ExitMapBest" />
 					</subNodes>
 				</li>
 
@@ -132,7 +121,7 @@
 					<subNodes>
 
 						<!-- Flee explosion -->
-						<li Class="JobGiver_FleeExplosion" />
+						<li Class="JobGiver_FleePotentialExplosion" />
 
 						<!-- Hostility response -->
 						<li Class="JobGiver_ConfigurableHostilityResponse" />
@@ -147,4 +136,4 @@
 		</thinkRoot>
 	</ThinkTreeDef>
 
-</ThinkTrees>
+</Defs>

@@ -1,5 +1,4 @@
 ﻿using RimWorld.Planet;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Verse;
@@ -14,7 +13,7 @@ namespace BaseRobot
 		//
 		protected override IEnumerable<Pawn> Pawns {
 			get {
-				return from p in Find.VisibleMap.mapPawns.PawnsInFaction (Faction.OfPlayer)
+				return from p in Find.CurrentMap.mapPawns.PawnsInFaction (Faction.OfPlayer)
 						where p.RaceProps.IsMechanoid
 					orderby p.RaceProps.baseBodySize, p.def.label
 					select p;

@@ -165,9 +165,7 @@ namespace BaseRobot
 				if (Rand.MTBEventOccurs (mtb, 60000, 150)) {
 					this.pawn.jobs.StartJob (new Job (JobDefOf.LayDown, this.pawn.Position), JobCondition.InterruptForced, null, false, true, null, null);
 					if (PawnUtility.ShouldSendNotificationAbout (this.pawn)) {
-						Messages.Message ("MessageInvoluntarySleep".Translate (new object[] {
-							this.pawn.LabelShort
-						}), this.pawn, MessageSound.Negative);
+						Messages.Message ("MessageInvoluntarySleep".Translate (this.pawn.LabelShort), this.pawn, MessageTypeDefOf.NegativeEvent);
 					}
 				}
 			}
