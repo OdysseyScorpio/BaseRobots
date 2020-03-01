@@ -25,7 +25,7 @@ namespace BaseRobot
 		//
 		public WorkTags robotWorkTags {
 			get {
-				bool flag = this.robotWorkTagsInt == null && this.robotWorkTypes.Count > 0;
+				bool flag = this.robotWorkTypes.Count > 0;
 				if (flag) {
 					this.InitWorkTagsFromWorkTypes ();
 				}

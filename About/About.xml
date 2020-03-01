@@ -1,12 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Base Robots</name>
-	<author>Arcane_Chill</author>
-	<url></url>
-	<targetVersion>0.17.0</targetVersion>
+	<name>Base Robots [1.1]</name>
+	<author>OdysseyScorpio</author>
+	<url>https://github.com/OdysseyScorpio/BaseRobots</url>
+	<supportedVersions>
+		<li>1.1</li>
+	</supportedVersions>
+	<packageId>OdysseyScorpio.BaseRobots.20200301</packageId>
 	<description>This is meant to be used by other modders who want to create their own custom robots.
 
 Special thanks to Haplo_X1 - I relied heavily on his mod Misc. Robots
+Original Mod by ArcaneChill - I have only updated this to be compatible with RimWorld 1.1
 
 	</description>
 </ModMetaData>

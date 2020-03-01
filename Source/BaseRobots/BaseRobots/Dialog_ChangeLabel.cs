@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using Verse;
+using RimWorld;
 
 namespace BaseRobot
 {
@@ -74,9 +75,7 @@ namespace BaseRobot
 				}
 				this.pawn.Name = this.CurPawnName;
 				Find.WindowStack.TryRemove (this, true);
-				Messages.Message ("RobotGainsName".Translate (new object[] {
-					this.curName
-				}), this.pawn, MessageSound.Benefit);
+                Messages.Message ("RobotGainsName".Translate (this.curName), this.pawn, MessageTypeDefOf.NegativeEvent);
 			}
 		}
 	}
