@@ -43,5 +43,13 @@ namespace BaseRobot
 			yield return this.DespawnIntoContainer ();
 			yield break;
 		}
-	}
+
+        public override bool TryMakePreToilReservations(bool errorOnFailed)
+        {
+            Log.Message($"{pawn} starting GoRecharging job: {job.targetQueueA.ToStringSafeEnumerable()}:{job.countQueue.ToStringSafeEnumerable()}");
+            pawn.ReserveAsManyAsPossible(job.targetQueueA, job);
+            pawn.ReserveAsManyAsPossible(job.targetQueueB, job);
+            return pawn.Reserve(job.targetQueueA[0], job) && pawn.Reserve(job.targetB, job);
+        }
+    }
 }

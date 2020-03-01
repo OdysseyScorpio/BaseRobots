@@ -1,60 +1,64 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<BodyPartDefs>
+<Defs>
 
-	<!-- BaseRobot  -->
+	<!-- BaseRobot -->
 
 	<BodyPartDef>
 		<defName>BaseRobot_Thorax</defName>
 		<label>Thorax</label>
 		<hitPoints>40</hitPoints>
-		<oldInjuryBaseChance>0</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 		<skinCovered>true</skinCovered>
-		<isSolid>true</isSolid>
-		<dontSuggestAmputation>true</dontSuggestAmputation>
+		<solid>true</solid>
+		<bleedRate>0</bleedRate>
+		<canSuggestAmputation>false</canSuggestAmputation>
 	</BodyPartDef>
 
 	<BodyPartDef>
 		<defName>BaseRobot_ArtificialBrain</defName>
 		<label>Central Processing Unit</label>
 		<hitPoints>10</hitPoints>
-		<oldInjuryBaseChance>0</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 		<skinCovered>false</skinCovered>
-		<isSolid>true</isSolid>
-		<isAlive>false</isAlive>
+		<solid>true</solid>
+		<bleedRate>0</bleedRate>
+		<alive>false</alive>
 		<tags>
 			<li>ConsciousnessSource</li>
 			<li>SightSource</li>
 			<li>HearingSource</li>
-			<li>Moving_brain</li>
-			<li>Manipulation_brain</li>
-			<li>Manipulation_humerus</li>
-			<li>Manipulation_radius</li>
+			<li>EatingSource</li>
+			<li>ManipulationLimbCore</li>
+			<li>ManipulationLimbSegment</li>
+			<li>ManipulationLimbSegment</li>
 		</tags>
-		<dontSuggestAmputation>true</dontSuggestAmputation>
+		<canSuggestAmputation>false</canSuggestAmputation>
 	</BodyPartDef>
 
 	<BodyPartDef>
 		<defName>BaseRobot_UnneededData</defName>
 		<label>Central Memory Unit</label>
 		<hitPoints>3</hitPoints>
-		<oldInjuryBaseChance>0</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 		<skinCovered>false</skinCovered>
-		<isSolid>true</isSolid>
-		<isAlive>false</isAlive>
+		<solid>true</solid>
+		<bleedRate>0</bleedRate>
+		<alive>false</alive>
 		<tags>
 			<li>BreathingPathway</li>
 		</tags>
-		<dontSuggestAmputation>true</dontSuggestAmputation>
+		<canSuggestAmputation>false</canSuggestAmputation>
 	</BodyPartDef>
 
 	<BodyPartDef>
 		<defName>BaseRobot_CommUnit</defName>
 		<label>Communication Unit</label>
 		<hitPoints>3</hitPoints>
-		<oldInjuryBaseChance>0</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 		<skinCovered>false</skinCovered>
-		<isSolid>true</isSolid>
-		<isAlive>false</isAlive>
+		<solid>true</solid>
+		<bleedRate>0</bleedRate>
+		<alive>false</alive>
 		<tags>
 			<li>TalkingSource</li>
 			<li>TalkingPathway</li>
@@ -65,9 +69,9 @@
 		<defName>BaseRobot_BatteryLeft</defName>
 		<label>Left battery</label>
 		<hitPoints>20</hitPoints>
-		<oldInjuryBaseChance>0</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 		<skinCovered>false</skinCovered>
-		<isAlive>false</isAlive>
+		<alive>false</alive>
 		<tags>
 			<li>BloodPumpingSource</li>
 			<li>BloodFiltrationSource</li>
@@ -80,9 +84,9 @@
 		<defName>BaseRobot_BatteryRight</defName>
 		<label>Right battery</label>
 		<hitPoints>20</hitPoints>
-		<oldInjuryBaseChance>0</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 		<skinCovered>false</skinCovered>
-		<isAlive>false</isAlive>
+		<alive>false</alive>
 		<tags>
 			<li>BloodPumpingSource</li>
 			<li>BloodFiltrationSource</li>
@@ -95,9 +99,9 @@
 		<defName>BaseRobot_MaterialAnalyzer</defName>
 		<label>Material analyzer</label>
 		<hitPoints>10</hitPoints>
-		<oldInjuryBaseChance>0</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 		<skinCovered>false</skinCovered>
-		<isAlive>false</isAlive>
+		<alive>false</alive>
 		<tags>
 			<li>EatingSource</li>
 			<li>EatingPathway</li>
@@ -108,15 +112,16 @@
 		<defName>BaseRobot_Spine</defName>
 		<label>Spine</label>
 		<hitPoints>35</hitPoints>
-		<oldInjuryBaseChance>0</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 		<skinCovered>false</skinCovered>
-		<isSolid>true</isSolid>
-		<isAlive>false</isAlive>
+		<solid>true</solid>
+		<bleedRate>0</bleedRate>
+		<alive>false</alive>
 		<tags>
 			<li>MovingLimbCore</li>
 			<li>ManipulationLimbCore</li>
 		</tags>
-		<dontSuggestAmputation>true</dontSuggestAmputation>
+		<canSuggestAmputation>false</canSuggestAmputation>
 	</BodyPartDef>
 
-</BodyPartDefs>
+</Defs>

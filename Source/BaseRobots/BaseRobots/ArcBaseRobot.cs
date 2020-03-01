@@ -27,9 +27,6 @@ namespace BaseRobot
 			if (map == null && bot.rechargeStation != null) {
 				map = bot.rechargeStation.Map;
 			}
-			if (map == null) {
-				map = Find.VisibleMap;
-			}
 
 			Building_BaseRobotRechargeStation result;
 			if (map == null) {
@@ -95,7 +92,7 @@ namespace BaseRobot
 			}
 			base.Destroy (0);
 
-			if (mode != null && thingDef != null) {
+			if ( thingDef != null) {
 				BaseRobot_disabled BaseRobot_disabled = (BaseRobot_disabled)GenSpawn.Spawn (thingDef, intVec, map);
 				BaseRobot_disabled.stackCount = 1;
 				BaseRobot_disabled.rechargestation = rechargestation;
@@ -190,7 +187,7 @@ namespace BaseRobot
 				this.skills = new Pawn_SkillTracker (this);
 				this.SetSkills ();
 				this.story = new Pawn_StoryTracker (this);
-				this.story.bodyType = this.gender == Gender.Female ? RimWorld.BodyType.Male : RimWorld.BodyType.Female;
+                this.story.bodyType = this.gender == Gender.Female ? RimWorld.BodyTypeDefOf.Male : RimWorld.BodyTypeDefOf.Female;
 				this.story.crownType = Verse.CrownType.Average;
 				base.Drawer.renderer.graphics.ResolveApparelGraphics ();
 			}

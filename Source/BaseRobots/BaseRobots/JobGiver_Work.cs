@@ -63,7 +63,7 @@ namespace BaseRobot
 								Thing thing = thingList [i];
 
 								if (scanner.PotentialWorkThingRequest.Accepts (thing) && predicate (thing)) {
-									pawn.mindState.lastGivenWorkType = giver.def.workType;
+									//pawn.mindState.lastGivenWorkType = giver.def.workType;
 									Job job3 = scanner.JobOnThing (pawn, thing, false);
 									result = job3;
 									return result;
@@ -74,7 +74,7 @@ namespace BaseRobot
 							!ForbidUtility.IsForbidden (cell, pawn) && 
 							scanner.HasJobOnCell (pawn, cell)) {
 
-							pawn.mindState.lastGivenWorkType = giver.def.workType;
+							//pawn.mindState.lastGivenWorkType = giver.def.workType;
 							Job job4 = scanner.JobOnCell (pawn, cell);
 							result = job4;
 							return result;
@@ -146,7 +146,7 @@ namespace BaseRobot
 									else {
 										Predicate<Thing> predicate3 = predicate;
 										bool flag7 = enumerable != null;
-										thing = GenClosest.ClosestThingReachable (pawn.Position, pawn.Map, scanner.PotentialWorkThingRequest, scanner.PathEndMode, TraverseParms.For (pawn, Danger.Deadly, 0, false), 9999, predicate3, enumerable, 0, scanner.LocalRegionsToScanFirst, flag7, RegionType.Set_Passable, false);
+										thing = GenClosest.ClosestThingReachable (pawn.Position, pawn.Map, scanner.PotentialWorkThingRequest, scanner.PathEndMode, TraverseParms.For (pawn, Danger.Deadly, 0, false), 9999, predicate3, enumerable, 0, scanner.MaxRegionsToScanBeforeGlobalSearch, flag7, RegionType.Set_Passable, false);
 									}
 									if (thing != null) {
 										targetInfo = thing;
@@ -201,7 +201,7 @@ namespace BaseRobot
 						}
 
 						if (targetInfo.IsValid) {
-							pawn.mindState.lastGivenWorkType = workGiver.def.workType;
+							//pawn.workSettings.lastGivenWorkType = workGiver.def.workType;
 							Job job2 = workGiver_Scanner.JobOnThing (pawn, targetInfo.Thing, false);
 
 							if (job2 != null) {
