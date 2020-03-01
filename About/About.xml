@@ -7,6 +7,7 @@
 		<li>1.1</li>
 	</supportedVersions>
 	<packageId>OdysseyScorpio.BaseRobots.20200301</packageId>
+
 	<description>This is meant to be used by other modders who want to create their own custom robots.
 
 Special thanks to Haplo_X1 - I relied heavily on his mod Misc. Robots
