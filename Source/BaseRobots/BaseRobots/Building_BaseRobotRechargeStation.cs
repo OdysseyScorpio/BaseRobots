@@ -309,7 +309,7 @@ namespace BaseRobot
 				yield return gizmo;
 				gizmo = null;
 			}/**/
-
+            IEnumerator<Gizmo> enumerator = null;
 			bool flag = this.robot == null && !this.robotIsDestroyed;
 			if (flag) {
 				Command_Action command_Action = new Command_Action ();

@@ -84,15 +84,20 @@ namespace BaseRobot
 			get {
 				switch (this.CurCategory) {
 				case RestCategory.Rested:
+                        Log.Message("RESTED");
 					return 1.583333E-05f * this.RestFallFactor;
 				case RestCategory.Tired:
-					return 1.583333E-05f * this.RestFallFactor * 0.7f;
+                        Log.Message("Tired");
+                        return 1.583333E-05f * this.RestFallFactor * 0.7f;
 				case RestCategory.VeryTired:
-					return 1.583333E-05f * this.RestFallFactor * 0.3f;
+                        Log.Message("VeryTired");
+                        return 1.583333E-05f * this.RestFallFactor * 0.3f;
 				case RestCategory.Exhausted:
-					return 1.583333E-05f * this.RestFallFactor * 0.6f;
+                        Log.Message("Exhausted");
+                        return 1.583333E-05f * this.RestFallFactor * 0.6f;
 				default:
-					return 999;
+                        Log.Message("other");
+                        return 999;
 				}
 			}
 		}
@@ -114,9 +119,9 @@ namespace BaseRobot
 		//
 		public Need_Battery (Pawn pawn) : base (pawn)
 		{
-			this.threshPercents = new List<float> ();
-			this.threshPercents.Add (0.28f);
-			this.threshPercents.Add (0.14f);
+                this.threshPercents = new List<float>();
+                this.threshPercents.Add(0.28f);
+                this.threshPercents.Add(0.14f);
 		}
 
 		//
@@ -173,8 +178,29 @@ namespace BaseRobot
 
 		public override void SetInitialLevel ()
 		{
-			this.CurLevel = Rand.Range (0.9f, 1);
-		}
+            Log.Message("Pawn battery check1: " + pawn.Name);
+            if (pawn.def.thingClass == typeof(ArcBaseRobot))
+            {
+                ArcBaseRobot robot = (ArcBaseRobot)pawn;
+                Log.Message("Pawn battery check1a: " + pawn.Name);
+                if (robot.isRobot())
+                {
+                    Log.Message("Pawn battery check1b: " + pawn.Name);
+                    this.CurLevel = Rand.Range(0.9f, 1);
+                }
+                else
+                {
+                    //not needed
+                    Log.Message("no battery needed1");
+                }
+            }
+            else
+            {
+                //not needed
+                Log.Message("no battery needed2");
+                
+            }
+        }
 
 		public void TickResting (float restEffectiveness)
 		{

@@ -1,9 +1,9 @@
-D:\SteamLibrary\steamapps\common\RimWorld\Mods\BaseRobots\Source\BaseRobots\BaseRobots\obj\x86\Debug\BaseRobot.csprojResolveAssemblyReference.cache
 D:\SteamLibrary\steamapps\common\RimWorld\Mods\BaseRobots\Source\BaseRobots\BaseRobots\bin\Debug\BaseRobot.dll
 D:\SteamLibrary\steamapps\common\RimWorld\Mods\BaseRobots\Source\BaseRobots\BaseRobots\bin\Debug\BaseRobot.pdb
-D:\SteamLibrary\steamapps\common\RimWorld\Mods\BaseRobots\Source\BaseRobots\BaseRobots\obj\x86\Debug\BaseRobot.dll
-D:\SteamLibrary\steamapps\common\RimWorld\Mods\BaseRobots\Source\BaseRobots\BaseRobots\obj\x86\Debug\BaseRobot.pdb
 D:\SteamLibrary\steamapps\common\RimWorld\Mods\BaseRobots\Source\BaseRobots\BaseRobots\bin\Debug\0Harmony.dll
 D:\SteamLibrary\steamapps\common\RimWorld\Mods\BaseRobots\Source\BaseRobots\BaseRobots\bin\Debug\0Harmony.xml
 D:\SteamLibrary\steamapps\common\RimWorld\Mods\BaseRobots\Assemblies\BaseRobot.dll
 D:\SteamLibrary\steamapps\common\RimWorld\Mods\BaseRobots\Assemblies\BaseRobot.pdb
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\BaseRobots\Source\BaseRobots\BaseRobots\obj\x86\Debug\BaseRobot.csprojResolveAssemblyReference.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\BaseRobots\Source\BaseRobots\BaseRobots\obj\x86\Debug\BaseRobot.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\BaseRobots\Source\BaseRobots\BaseRobots\obj\x86\Debug\BaseRobot.pdb

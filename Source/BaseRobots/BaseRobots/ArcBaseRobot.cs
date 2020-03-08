@@ -19,6 +19,8 @@ namespace BaseRobot
 
 		private List<WorkGiver> workGiversNonEmergencyCache = null;
 
+        private bool robot = false;
+
 		//
 		// Static Methods
 		//
@@ -27,8 +29,9 @@ namespace BaseRobot
 			if (map == null && bot.rechargeStation != null) {
 				map = bot.rechargeStation.Map;
 			}
+            
 
-			Building_BaseRobotRechargeStation result;
+            Building_BaseRobotRechargeStation result;
 			if (map == null) {
 				result = null;
 			}
@@ -79,6 +82,11 @@ namespace BaseRobot
 			}
 			return result;
 		}
+
+        public bool isRobot()
+        {
+            return this.robot;
+        }
 
 		public override void Destroy (DestroyMode mode = 0)
 		{
@@ -184,6 +192,7 @@ namespace BaseRobot
 				this.Name = new NameSingle (this.Label);
 				this.equipment = new Pawn_EquipmentTracker (this);
 				this.apparel = new Pawn_ApparelTracker (this);
+                this.robot = true;
 				this.skills = new Pawn_SkillTracker (this);
 				this.SetSkills ();
 				this.story = new Pawn_StoryTracker (this);
